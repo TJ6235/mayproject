@@ -1,29 +1,39 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import './App.css';
+import FirstComponent from "./components/FirstComponent";
+import SecondComponent from "./components/SecondComponent";
 
 
+class App extends Component {
+  state = {
+    welcomeText: "Welcome",
+    myName: "Akshay",
+    myId: "props works"
+  };
 
-class App extends Component{
+  handleProps = () =>{
+        this.setState({
+          myId:"props works when button clicked"
+        }) 
+  };
 
-  state={
-  welcomeText:"Welcome",
-  myName:"Akshay",
-  myId:1374
+  handlePropsTwo = ()=>{
+    this.setState({
+      myName:"tj akshay"
+    })
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <div className="App">
-      <h1>{this.state.welcomeText}</h1>
-      <>
-      <h1>{this.state.myName}</h1>
-      </>
-      <>
-      <h1>{this.state.myId}</h1>
-      </>
-     </div>
-    )
+        <h1>{this.state.welcomeText}</h1>
+        <div>
+          <FirstComponent propsSending = {this.state.myId}/> <button onClick={this.handleProps} >Click to chamge</button>
+          <SecondComponent propsSendingsndpge = {this.state.myName}/> <button onClick={this.handlePropsTwo}>Click to change Name </button>
+        </div>
+      </div>
+    );
   }
-};
+}
 
 export default App;
