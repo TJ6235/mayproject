@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component} from "react";
 
 
 class SecondComponent extends Component {
@@ -6,8 +6,6 @@ class SecondComponent extends Component {
     return (
         <div>
         <h1>{this.props.propsSendingsndpge}</h1>
-        <h1>hello</h1>
-        <h1>akshay</h1>
         </div>
     )
 

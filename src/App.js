@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './App.css';
-import FirstComponent from "./components/FirstComponent";
+// import FirstComponent from "./components/FirstComponent";
 import SecondComponent from "./components/SecondComponent";
 
 
@@ -28,10 +28,10 @@ class App extends Component {
       <div className="App">
         <h1>{this.state.welcomeText}</h1>
         <div>
-          <FirstComponent propsSending = {this.state.myId}/> <button onClick={this.handleProps} >Click to chamge</button>
+          {/* <FirstComponent propsSending = {this.state.myId}/> <button onClick={this.handleProps} >Click to chamge</button> */}
           <SecondComponent propsSendingsndpge = {this.state.myName}/> <button onClick={this.handlePropsTwo}>Click to change Name </button>
         </div>
-      </div>
+      </div> 
     );
   }
 }
