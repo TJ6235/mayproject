@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import './App.css';
-import FirstComponent from "./components/FirstComponent";
 import SecondComponent from "./components/SecondComponent";
+import IncrementFnc from "./components/IncrementFnc";
+import Forms from "./components/Forms";
 
 
 class App extends Component {
@@ -28,8 +29,11 @@ class App extends Component {
       <div className="App">
         <h1>{this.state.welcomeText}</h1>
         <div>
-          <FirstComponent propsSending = {this.state.myId}/> <button onClick={this.handleProps} >Click to chamge</button>
-          <SecondComponent propsSendingsndpge = {this.state.myName}/> <button onClick={this.handlePropsTwo}>Click to change Name </button>
+          <SecondComponent propsSendingsndpge = {this.state.myName}/> <button onClick={this.handlePropsTwo}>Click to change </button>
+          <IncrementFnc/>
+        </div>
+        <div>
+          <Forms/>
         </div>
       </div> 
     );
